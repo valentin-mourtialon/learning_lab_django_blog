@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'blog/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'blog/reset.css' %}" />
+    {% if title %}
+    <title>Pamplemousse - {{ title }}</title>
+    {% else %}
+    <title>Pamplemousse</title>
+    {% endif %}
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="{% url 'blog-home' %}">Home</a></li>
+          <li><a href="{% url 'blog-about' %}">About</a></li>
+          <li>Login</li>
+          <li>Register</li>
+        </ul>
+      </nav>
+    </header>
+    <div class="body-content-container">{% block content %}{% endblock %}</div>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+:root {
+  --slate-50: #f8fafc;
+  --slate-200: #e2e8f0;
+  --slate-300: #cbd5e1;
+  --slate-400: #94a3b8;
+  --slate-900: #0f172a;
+}
+
+body {
+  background-color: var(--slate-300);
+  font-family: sans-serif;
+  color: var(--slate-900);
+}
+
+li {
+  list-style: none;
+}
+
+.body-content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  /* background-color: var(--slate-200); */
+  /* border: 2px solid var(--slate-900); */
+}
+
+/******************************** NAVIGATION BAR ******************************/
+
+nav {
+  display: flex;
+  justify-content: center;
+}
+
+nav > ul {
+  display: flex;
+  gap: 2rem;
+}
+
+/********************************* ARTICLE ************************************/
+
+article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--slate-50);
+  border: 3px solid var(--slate-900);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+p {
+  max-width: 75ch;
+}
