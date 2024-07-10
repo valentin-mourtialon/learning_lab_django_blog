@@ -16,13 +16,24 @@ li {
   list-style: none;
 }
 
+.all-articles-container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 2rem;
+  /* border: 2px solid rgb(32, 65, 255); */
+}
+
 .body-content-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
   /* background-color: var(--slate-200); */
-  /* border: 2px solid var(--slate-900); */
+  /* border: 2px solid red; */
 }
 
 /******************************** NAVIGATION BAR ******************************/
@@ -30,6 +41,10 @@ li {
 nav {
   display: flex;
   justify-content: center;
+  border-bottom: 3px solid var(--slate-900);
+  background-color: var(--slate-200);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 nav > ul {
@@ -37,12 +52,15 @@ nav > ul {
   gap: 2rem;
 }
 
+/* nav > ul > li {
+  border: 3px solid var(--slate-900);
+} */
+
 /********************************* ARTICLE ************************************/
 
 article {
   display: flex;
   flex-direction: column;
-  align-items: center;
   background-color: var(--slate-50);
   border: 3px solid var(--slate-900);
   border-radius: 1rem;

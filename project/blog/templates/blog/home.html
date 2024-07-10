@@ -1,10 +1,13 @@
-{% extends "blog/base.html" %} {% block content %} {% for post in posts %}
-<article>
-  <div class="article-content-container">
-    <a href="#">{{ post.author }}</a>
-    <small>{{ post.date_posted }}</small>
-    <h2><a href="#">{{ post.title }}</a></h2>
-    <p>{{ post.content }}</p>
-  </div>
-</article>
-{% endfor %}{% endblock %}
+{% extends "blog/base.html" %} {% block content %}
+<div class="all-articles-container">
+  {% for post in posts %}
+  <article>
+    <div class="article-content-container">
+      <a href="#">{{ post.author }}</a>
+      <small>{{ post.date_posted|date:"F d, Y" }}</small>
+      <h2><a href="#">{{ post.title }}</a></h2>
+      <p>{{ post.content }}</p>
+    </div>
+  </article>
+  {% endfor %}{% endblock %}
+</div>
