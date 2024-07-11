@@ -23,6 +23,10 @@
         </ul>
       </nav>
     </header>
-    <div class="body-content-container">{% block content %}{% endblock %}</div>
+    <div class="body-content-container">
+      {% if messages %} {% for message in messages %}
+      <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+      {% endfor %} {% endif %}{% block content %}{% endblock %}
+    </div>
   </body>
 </html>

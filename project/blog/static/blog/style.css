@@ -16,6 +16,19 @@ li {
   list-style: none;
 }
 
+.body-content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  /* background-color: var(--slate-200); */
+  /* border: 2px solid red; */
+}
+
 .all-articles-container {
   display: flex;
   flex-direction: column;
@@ -24,16 +37,9 @@ li {
   /* border: 2px solid rgb(32, 65, 255); */
 }
 
-.body-content-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  margin-left: 1rem;
-  margin-right: 1rem;
-  /* background-color: var(--slate-200); */
-  /* border: 2px solid red; */
+h1 {
+  /* border: 2px solid rgb(32, 65, 255); */
+  padding-bottom: 1rem;
 }
 
 /******************************** NAVIGATION BAR ******************************/
@@ -65,8 +71,27 @@ article {
   border: 3px solid var(--slate-900);
   border-radius: 1rem;
   padding: 1rem;
+  max-width: 80ch; /* Each article is itself a child of the all-articles-container flexbox */
 }
 
-p {
+/* p {
   max-width: 75ch;
+} */
+
+/********************************* FROM ***************************************/
+
+form {
+  border: 3px solid var(--slate-400);
+  border-radius: 1rem;
+  background-color: var(--slate-50);
+  padding: 2rem;
+}
+
+/********************************* ALERT **************************************/
+
+.alert-success {
+  /* display: flex; */
+  border: 3px solid green;
+  align-self: stretch;
+  color: darkgreen;
 }
