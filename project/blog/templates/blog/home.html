@@ -5,10 +5,12 @@
     {% for post in posts %}
     <article>
       <div class="article-content-container">
-        <a href="#">{{ post.author }}</a>
-        <small>{{ post.date_posted|date:"F d, Y" }}</small>
-        <h2><a href="#">{{ post.title }}</a></h2>
-        <p>{{ post.content }}</p>
+        <p>
+          <a href="#">{{ post.author }}</a>
+          <small>{{ post.date_posted|date:"F d, Y" }}</small>
+        </p>
+        <h2 class="article-title"><a href="#">{{ post.title }}</a></h2>
+        <p class="article-text-content">{{ post.content }}</p>
       </div>
     </article>
     {% endfor %}{% endblock %}
