@@ -129,3 +129,12 @@ STATIC_URL = "static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 LOGIN_REDIRECT_URL = "blog-home"
+
+# When trying to access a authenticated only (login_required) route such as the
+# profile one, you'll be redirected to the LOGIN_URL
+LOGIN_URL = "login"
+# Try to access "profile" route without being logged in and see the url path
+# in the browser being : "/login/?next=/profile/"
+# Note the param: "?next=" and its value "/profile/" : it's keeping trace of
+# what we try to access to redirect us there after we log in: nice built in
+# feature

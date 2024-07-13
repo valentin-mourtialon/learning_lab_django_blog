@@ -140,6 +140,7 @@ input {
   height: 2.5rem;
   border: 1px solid var(--slate-300);
   border-radius: 0.5rem;
+  padding: 0.5rem;
 }
 
 form > p {
@@ -186,4 +187,30 @@ form > button[type="submit"] {
   border: 3px solid red;
   align-self: stretch;
   color: red;
+}
+
+/******************************** LOGOUT BUTTON AS A FORM *********************/
+
+#logout-form {
+  display: inline;
+  border-radius: initial;
+  background-color: initial;
+  padding: 0;
+  box-shadow: initial;
+}
+
+#logout-form-button {
+  background: initial;
+  height: fit-content;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  text-decoration: underline;
+  color: blue;
+}
+
+#logout-form button:hover {
+  text-decoration: none;
+  color: darkblue;
 }
