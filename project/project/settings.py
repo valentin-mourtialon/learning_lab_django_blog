@@ -123,6 +123,11 @@ USE_TZ = True
 
 STATIC_URL = "static/"
 
+# Where our uploaded file are stored on the server:
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+# How we access our images in the browser
+MEDIA_URL = "/media/"
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
