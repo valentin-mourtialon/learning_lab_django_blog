@@ -2,14 +2,25 @@
 <div class="articles-page-row">
   <div class="articles-elements-col">
     <h1>All articles</h1>
-    {% for post in posts %}
+    {% if user.is_authenticated %}
+    <a href="{% url 'post-create' %}">Create a new post</a>
+    {% endif %} {% for post in posts %}
     <article>
       <div class="article-content-container">
-        <p>
-          <a href="#">{{ post.author }}</a>
-          <small>{{ post.date_posted|date:"F d, Y" }}</small>
-        </p>
-        <h2 class="article-title"><a href="#">{{ post.title }}</a></h2>
+        <div class="article-header-container">
+          <img
+            src="{{ post.author.profile.image.url }}"
+            alt=""
+            class="profile-picture-article"
+          />
+          <p>
+            <a href="#">{{ post.author }}</a>
+            <small>{{ post.date_posted|date:"F d, Y" }}</small>
+          </p>
+        </div>
+        <h2 class="article-title">
+          <a href="{% url 'post-detail' post.id %}">{{ post.title }}</a>
+        </h2>
         <p class="article-text-content">{{ post.content }}</p>
       </div>
     </article>

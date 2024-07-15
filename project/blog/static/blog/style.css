@@ -5,9 +5,16 @@
   --pamplemousse-200: #ffa296;
   --pamplemousse-300: #ff542e;
   --pamplemousse-350: #8f3e2c;
-  --pamplemousse-400: #6f413c;
+  --pamplemousse-400: #6e4541;
   --pamplemousse-500: #0c0100;
   --pamplemousse-shadow: rgba(12, 1, 0, 0.08);
+}
+
+header {
+  background-color: var(--pamplemousse-100);
+  position: sticky;
+  top: 0px;
+  /* background: gradient(crimson, skyblue); */
 }
 
 body {
@@ -86,8 +93,7 @@ nav {
   justify-content: center;
   border-bottom: 1px solid var(--pamplemousse-400);
   /* background-color: var(--slate-100); */
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding: 1rem;
 }
 
 nav > ul {
@@ -131,6 +137,13 @@ article {
 
 .article-text-content {
   padding-top: 1rem;
+}
+
+.article-header-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
 /********************************* REGISTER PAGE ******************************/
@@ -205,6 +218,19 @@ form > button[type="submit"]:hover {
   color: var(--pamplemousse-50);
 }
 
+form > button[type="submit"].danger {
+  height: 2.5rem;
+  border-style: none;
+  border-radius: 0.5rem;
+  background-color: red;
+  color: var(--pamplemousse-50);
+  font-weight: 600;
+}
+form > button[type="submit"].danger:hover {
+  background-color: darkred;
+  color: var(--pamplemousse-50);
+}
+
 .helptext {
   color: var(--pamplemousse-400);
   font-size: 0.875rem;
@@ -212,17 +238,22 @@ form > button[type="submit"]:hover {
 
 /********************************* ALERT **************************************/
 
+.alert {
+  align-self: center;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
 .alert-success {
-  /* display: flex; */
   border: 3px solid green;
-  align-self: stretch;
+  background-color: rgba(0, 128, 0, 0.2);
   color: darkgreen;
 }
 
 .alert-error {
   /* display: flex; */
   border: 3px solid red;
-  align-self: stretch;
+  background-color: rgba(255, 0, 0, 0.2);
   color: red;
 }
 
@@ -262,8 +293,31 @@ form > button[type="submit"]:hover {
 }
 
 .profile-picture {
-  width: 300px;
-  height: 300px;
+  width: 80px;
+  height: 80px;
   object-fit: cover;
   border-radius: 50%;
+}
+
+.profile-picture-article {
+  width: 32px;
+  height: 32px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid var(--pamplemousse-300);
+}
+
+/******************************** CRUS POSTS **********************************/
+
+.ud-actions-post {
+  margin-left: auto;
+  display: flex;
+  justify-content: flex-end;
+  /* flex-wrap: wrap; */
+  /* align-content: center; */
+  gap: 1rem;
+}
+
+.delete-post {
+  color: red;
 }

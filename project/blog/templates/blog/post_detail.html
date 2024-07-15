@@ -1,0 +1,33 @@
+{% extends "blog/base.html" %} {% block content %}
+<div class="articles-page-row">
+  <div class="articles-elements-col">
+    <article>
+      <div class="article-content-container">
+        <div class="article-header-container">
+          <img
+            src="{{ object.author.profile.image.url }}"
+            alt=""
+            class="profile-picture-article"
+          />
+          <p>
+            <a href="#">{{ object.author }}</a>
+            <small>{{ object.date_posted|date:"F d, Y" }}</small>
+          </p>
+          <div class="ud-actions-post">
+            {% if object.author == user %}
+            <a href="{% url 'post-update' object.id %}" class="update-post"
+              >Update</a
+            >
+            <a href="{% url 'post-delete' object.id %}" class="delete-post"
+              >Delete</a
+            >
+            {% endif %}
+          </div>
+        </div>
+        <h2 class="article-title">{{ object.title }}</h2>
+        <p class="article-text-content">{{ object.content }}</p>
+      </div>
+    </article>
+    {% endblock %}
+  </div>
+</div>
