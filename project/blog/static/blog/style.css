@@ -321,3 +321,16 @@ form > button[type="submit"].danger:hover {
 .delete-post {
   color: red;
 }
+
+/******************************** PAGINATION **********************************/
+
+.pagination {
+  display: flex;
+  gap: 1rem;
+  /* justify-content: center; */
+  /* background-color: coral; */
+}
+
+.current {
+  color: var(--pamplemousse-500);
+}
